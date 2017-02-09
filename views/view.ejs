@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test board</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<table border="1px">
+  <tr>
+    <th width="30px">id</th>
+    <th width="100px">제목</th>
+    <th width="100px">내용</th>
+    <th width="100px">이미지주소</th>
+    <th width="100px">생성날짜</th>
+    <th width="100px">사진</th>
+  </tr>
+    <% for(var i=0; i<rows.length; i++) {%>
+  <tr>
+    <td><%= rows[i].id %></td>
+    <td><%= rows[i].title %></td>
+    <td><%= rows[i].description %></td>
+    <td><%= rows[i].img_url %></td>
+    <td><%= rows[i].creaed %></td>
+    <td>
+      <a href="view" target=_blank> <img src="<%= rows[i].img_url %>" style="width: 100%; max-width: 760px; vertical-align: middle" />  </a>
+    </td>
+  </tr>
+    <% } %>
+
+  <table>
+
+</body>
+</html>

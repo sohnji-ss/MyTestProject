@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>내용</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<table border="1px">
+  <tr>
+    <th width="30px">게시글 제목</th>
+    <th width="100px">내용</th>
+    <th width="100px">이미지주소</th>
+    <th width="100px">사진</th>
+  </tr>
+  <%if(rows.length > 0) {
+  %>
+  <tr>
+    <td><%= rows[0].title %></td>
+    <td><%= rows[0].description %></td>
+    <td><%= rows[0].img_url %></td>
+    <td>
+      <a href="/board/<%= rows[0].id %>" target=_parent> <img src="http://localhost:3000<%= rows[0].img_url %>" style="width: 100%; max-width: 760px; vertical-align: middle" />  </a>
+    </td>
+  </tr>
+    <%}%>
+
+  </table>
+
+</body>
+</html>
